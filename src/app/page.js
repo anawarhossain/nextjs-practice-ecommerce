@@ -1,11 +1,17 @@
 import React from 'react';
+import HomePage from './home/page';
 
-const HomePage = () => {
+export const metadata = {
+  title: "Home | Ecommerce",
+  description: "This is metadata Descriptions",
+};
+
+const HomePages = () => {
   return (
-    <div className='text-2xl text-center'>
-      this is home page
+    <div>
+      <HomePage/>
     </div>
   );
 };
 
-export default HomePage;
+export default HomePages;

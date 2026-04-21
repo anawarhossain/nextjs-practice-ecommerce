@@ -1,23 +1,11 @@
-import Link from "next/link";
+
 import React from "react";
+import MenuItem from "./MenuItem";
+import Link from "next/link";
 
 const NavbarMenu = () => {
-  const NavMenu = (
-    <>
-      <li>
-        <Link href="/">Home</Link>
-      </li>
-      <li>
-        <Link href="/about">About</Link>
-      </li>
-      <li>
-        <Link href="/product">Products</Link>
-      </li>
-      <li>
-        <Link href="/profile">Profile</Link>
-      </li>
-    </>
-  );
+
+  
 
   return (
     <div>
@@ -45,13 +33,15 @@ const NavbarMenu = () => {
               tabIndex="-1"
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
-              {NavMenu}
+              <MenuItem />
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <Link href='/' className="btn btn-ghost text-xl">daisyUI</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{NavMenu}</ul>
+          <ul className="menu menu-horizontal px-1">
+            <MenuItem />
+          </ul>
         </div>
         <div className="navbar-end">
           <a className="btn">Button</a>
